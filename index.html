@@ -5,9 +5,19 @@
   <link href="css/style.css" />
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js" type="text/javascript"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBOjlRIgUvCE7lGWHnVfrXBTFnU210YHE" type="text/javascript"></script>
+  <script type="text/javascript">
+  function initialize() {
+    var mapOptions = {
+      center: { lat: -34.397, lng: 150.644},
+      zoom: 8
+    };
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
 </head>
 <body>
   <h1>GoTravel</h1>
-  
+  <div id="map-container"></div>
 </body>
 </html>
